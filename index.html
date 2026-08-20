@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário Bia!!!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Images/icons8-birthday-16.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+        }
+        body, html{
+            overflow: hidden;
+        }
+        section.Initial{
+            background: linear-gradient(135deg, #FA0080 0%, #7A3D5D 100%);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .Initial h1{
+            font-family: "Pixelify Sans", sans-serif;
+            color: rgba(245, 245, 245, 0.9);
+            z-index: 20;
+            font-size: 3em;
+            transition: 1s all;
+        }
+        .Initial h2{
+            font-family: "Pixelify Sans", sans-serif;
+            color: rgba(245, 245, 245, 0.9);
+            max-width: 75vw;
+            margin-top: 5vh;
+            font-size: 1.5em;
+            z-index: 20;
+            transition: 1s all;
+        }
+        @keyframes FadeIn {
+            0%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100%{
+                transform: translateY(-200vh);
+                opacity: 1;
+            }
+        }
+        
+        .imgFade{
+            opacity: 1;
+            animation: FadeIn 5s forwards infinite;
+        }
+        #One{
+             transition: 1s all;
+            position: absolute;
+            left: 15vw;
+            top: 100vh;
+            opacity: 0;
+            z-index: 10;
+           
+        }
+        #Two{
+            transition: 1s all;
+            position: absolute;
+            left: 65vw;
+            top: 100vh;
+            opacity: 0;
+            z-index: 10;
+            
+        }
+        #Three{
+            transition: 1s all;
+            position: absolute;
+            left: 88vw;
+            top: 100vh;
+            opacity: 0;
+            z-index: 10;
+            
+        }
+        #Four{
+            transition: 1s all;
+            position: absolute;
+            left: 5vw;
+            top: 100vh;
+            opacity: 0;
+            z-index: 10;
+            
+        }
+        #BottomButton{
+            opacity: 0;
+            transition: 1s all;
+        }
+        #BottomButton button{
+            margin-top: 2vh;
+            background-color: white;
+            border: 3px solid whitesmoke;
+            width: 8vw;
+            height: 5vh;
+            border-radius: 5px;
+            font-family: "Pixelify Sans";
+            transition: 1s all;
+        }
+        #BottomButton button:hover{
+            background-color: black;
+            color: white;
+            border: rgba(0, 0, 0, 0.9);
+        }
+        .Up{
+            opacity: 1;
+            animation: FadeIn 5s forwards;
+        }
+        .atelie{
+            opacity: 0;
+            background: linear-gradient(135deg, #7A3D5D, #FA0080 );/*#00f2fe , #4facfe */
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            transition: 1s all;
+        }
+        .atelie h1{
+            font-family: "Pixelify Sans";
+            font-size: 3em;
+            color: white;
+        }
+        .atelie h2{
+            font-family: "Pixelify Sans";
+            font-size: 2em;
+            color: white;
+        }
+        .atelie p{
+            font-family: "Pixelify Sans";
+            font-size: 0.8em;
+            color: white;
+        }
+        .present{
+            display: none;
+            opacity: 0;
+            background: linear-gradient(135deg, #FA0080 , #7A3D5D );/*#00f2fe , #4facfe */
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: 1s all;
+            flex-direction: column;
+        }
+        #PresentButton{
+            margin-top: 5vh;
+        }
+        #PresentButton img{
+            width: 256px;
+            animation: pulse 2s  forwards infinite alternate;
+        }
+        .present h1{
+            font-size: 2em;
+            font-family: "Pixelify Sans";
+            color: white;
+        }
+        .Ultimate{
+            display: none;
+            opacity: 0;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);/*#00f2fe , #4facfe */
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: 1s all;
+            flex-direction: column;
+        }
+        .ballons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* Evita quebra de linha */
+    flex-wrap: nowrap;
+    /* Se quiser centralizar na horizontal */
+    /* overflow-x: auto; */
+    /* gap: 0; */
+}
+
+/* Sobreposição de balões: cada balão encavala o anterior */
+.ballons img {
+    width: 80px;           /* ajustar conforme seu layout */
+    height: auto;
+    z-index: 1;
+    transition: transform 0.15s, z-index 0.15s;
+    position: absolute; /* permite manipular z-index ao hover */
+}
+.ballons img:first-child {
+    margin-left: 0;
+}
+#PixelImg h1{
+    font-family: "Pixelify Sans";
+    color: white;
+    transition: 1s all;
+}
+#PixelImg button{
+    border: none;
+    background-color: transparent;
+}
+#positiveB img, #negativeB img{
+    width: 64px;
+    opacity: 0;
+    height: auto;
+}
+
+        @keyframes pulse{
+            0%{
+                transform: scale(1) translateY(-20px);
+                filter: drop-shadow(0 15px 10px rgba(0,0,0,0.2));
+            }
+            100%{
+                transform: scale(1.1) translateY(-20px);
+                filter: drop-shadow(0 15px 10px rgba(0,0,0,0.2));
+            }
+        }
+        @media (orientation: portrait) {
+            html, body {
+        overflow: hidden !important;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        max-width: 100vw;
+        max-height: 100vh;
+        touch-action: none;
+    }
+            body{
+                background-image: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            }
+            .Initial h1{
+                font-size: 2.5em;
+            }
+            .Initial h2{
+                font-size: 1.3em;
+                text-align: justify;
+            }
+            #BottomButton button{
+                width: 30vw;
+            }
+            .present h1{
+                font-size: 2em;
+            }
+            #PixelImg img{
+                width: 64px;
+            }
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <section class="Initial">
+        <h1></h1>
+        <h2></h2>
+        <div class="ocultsImg">
+            <img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="One">
+            <img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="Two">
+            <img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="Three">
+            <img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="Four">
+        </div>
+        
+    </section>
+    <section class="atelie">
+        <h2> </h2>
+        <h1></h1>
+        <p></p>
+    </section>
+    <section class="present">
+        <h1></h1>
+        <div id="PresentButton">
+            <img src="Download/download__13_-removebg-preview.png" alt="">
+        </div>
+    </section>
+    <section class="Ultimate">
+        <div class="ballons">
+            <!-- Imagens de b1 a b30 -->
+<img src="https://img.icons8.com/?size=100&id=SsBHiyU0IK28&format=png&color=000000" alt="" id="b1">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b2">
+<img src="https://img.icons8.com/?size=100&id=nCCzhwDa08So&format=png&color=000000" alt="" id="b3">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b4">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b5">
+<img src="https://img.icons8.com/?size=100&id=nCCzhwDa08So&format=png&color=000000" alt="" id="b6">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b7">
+<img src="https://img.icons8.com/?size=100&id=SsBHiyU0IK28&format=png&color=000000" alt="" id="b8">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b9">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b10">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b11">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b12">
+<img src="https://img.icons8.com/?size=100&id=SsBHiyU0IK28&format=png&color=000000" alt="" id="b13">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b14">
+<img src="https://img.icons8.com/?size=100&id=nCCzhwDa08So&format=png&color=000000" alt="" id="b15">
+<img src="https://img.icons8.com/?size=100&id=GrRadYfZGCNM&format=png&color=000000" alt="" id="b16">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b17">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b18">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b19">
+<img src="https://img.icons8.com/?size=100&id=GrRadYfZGCNM&format=png&color=000000" alt="" id="b20">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b21">
+<img src="https://img.icons8.com/?size=100&id=nCCzhwDa08So&format=png&color=000000" alt="" id="b22">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b23">
+<img src="https://img.icons8.com/?size=100&id=GrRadYfZGCNM&format=png&color=000000" alt="" id="b24">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b25">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b26">
+<img src="https://img.icons8.com/?size=100&id=nCCzhwDa08So&format=png&color=000000" alt="" id="b27">
+<img src="https://img.icons8.com/?size=100&id=sWMvCpgulppi&format=png&color=000000" alt="" id="b28">
+<img src="https://img.icons8.com/?size=100&id=SsBHiyU0IK28&format=png&color=000000" alt="" id="b29">
+<img src="https://img.icons8.com/?size=100&id=QeeBNIqkAWlj&format=png&color=000000" alt="" id="b30">
+        </div>
+        <div id="PixelImg">
+            <h1 id="PixelH1"></h1>
+        </div>
+    </section>
+    <script>
+        const h1 = document.querySelector('.Initial h1');
+        const h2 = document.querySelector('.Initial h2');
+        let h1Text = "Hoje é seu aniversário, PARABÉNS!";
+        let h2Text = "Bia, hoje, dia 20/08, é seu aniversário, e como você e uma pessoa muito especial para mim, eu decidi criar uma 'lembrancinha' até porque não isso não e um presente Mais de qualquer forma parabens pelo ano de vida aí. Sinceramente quero que você tivesse uma vida enorme e cheia de surpresa boas, que você possa sorrir para a vida e que ela possa sorrir para você de volta. Enfim chega de melação e vamos ao que interessa o bolo.";
+        const initial = document.querySelector('.Initial');
+        const ocultImg = document.querySelector('.ocultsImg');
+        const atelie = document.querySelector('.atelie');
+        const atelieH2 = document.querySelector('.atelie h2')
+        const atelieH1 = document.querySelector('.atelie h1');
+        const atelieP = document.querySelector('.atelie p');
+        const atelieH2Text = "E finalmente tome aqui";
+        const atelieh1Text = "O SEU BOLO VIRTUAL";
+        const ateliePText = "Espere uns segundinhos preciso traze-lo!";
+       
+        const presentH1 = document.querySelector('.present h1');
+        const presenth1Text = "Clique para comer";
+        const presentButton = document.querySelector('#PresentButton');
+        const bottomButton = document.querySelector('#BottomButton');
+        const imagesDiv = document.querySelector('.present');
+        const body = document.querySelector('body')
+        const ultimate = document.querySelector('.Ultimate');
+        const ballons = document.querySelectorAll('.ballons img');
+        const PixelArt = document.querySelector('#PixelImg')
+        const PixelH1 = document.querySelector('#PixelImg h1')
+        const positiveB = document.querySelector('#positiveB');
+        const negativeB = document.querySelector('#negativeB');
+        const PixelH1Text = "Tava gostoso?";
+        function typeNormal(Normal, i, textNormal, velocity, onEnd) {
+          if (i === 0) Normal.innerHTML = ""; // Zera antes de começar!
+          if (Normal && i < textNormal.length) {
+            Normal.innerHTML += textNormal.charAt(i);
+            i++;
+            setTimeout(() => typeNormal(Normal, i, textNormal, velocity, onEnd), velocity);
+          } else if (onEnd) {
+            onEnd();
+          }
+        }
+
+       
+        document.addEventListener("DOMContentLoaded", function () {
+    // ... [código anterior de variáveis e typeNormal] ...
+    typeNormal(h1, 0, h1Text, 80, () => {
+        const images = ocultImg.querySelectorAll("img");
+        images.forEach((img, idx) => {
+            setTimeout(() => {
+                img.classList.add("imgFade");
+            }, idx * 400);
+        });
+        typeNormal(h2, 0, h2Text, 60, () => {
+            setTimeout(() => {
+                h1.style.opacity = '0';
+                h2.style.opacity = '0';
+                images.forEach((img) => {
+                    img.classList.remove("imgFade");
+                    img.classList.add("Up");
+                }, 150);
+                setTimeout(() => {
+                    initial.style.display = 'none';
+                    atelie.style.opacity = '1';
+                    typeNormal(atelieH2, 0, atelieH2Text, 80, () => {
+                        typeNormal(atelieH1, 0, atelieh1Text, 80, () => {
+                            typeNormal(atelieP, 0, ateliePText, 10, () => {
+                                setTimeout(() => {
+                                    atelie.style.opacity = '0';
+                                    setTimeout(() => {
+                                        atelie.style.display = 'none';
+                                        imagesDiv.style.display = 'flex';
+                                        imagesDiv.style.opacity = '1';
+                                        typeNormal(presentH1, 0, presenth1Text, 80, () => {
+                                            // Evita múltiplos listeners
+                                            if (!presentButton.classList.contains('registered')) {
+                                                presentButton.classList.add('registered');
+                                                presentButton.addEventListener('click', () => {
+                                                    // Some com o presente
+                                                    imagesDiv.style.opacity = '0';
+                                                    setTimeout(() => {
+                                                        imagesDiv.style.display = 'none';
+                                                        // Aparece a Ultimate já com opacity 0, e depois fadein
+                                                        ultimate.style.display = 'flex';
+                                                        setTimeout(() => {
+                                                            ultimate.style.opacity = '1';
+                                                            ballons.forEach((img, idx) => {
+                                                               
+                                                                img.style.left = `${(Math.floor(Math.random() * 90))}vw`;
+                                                                img.style.bottom = '-10vh'
+                                                                setTimeout(() => {
+                                                                    img.classList.add('imgFade');
+                                                                }, idx * 200);
+                                                                setTimeout(() => {
+                                                                    img.classList.remove('imgFade');
+                                                                    setTimeout(() => {
+                                                                        PixelArt.style.display = 'flex';
+                                                                        setTimeout(() => {
+                                                                            PixelArt.style.opacity = '1';
+                                                                            
+                                                                        }, 1000);
+                                                                    }, 100);
+                                                                }, 5000 + idx * 200);
+                                                            });
+        
+                                                            setTimeout(() => {
+                                                                typeNormal(PixelH1, 0, PixelH1Text, 80, () => {
+                                                                    
+                                                                                setTimeout(() => {
+                                                                                    ultimate.style.opacity = '0';
+                                                                                    window.prompt("Feliz Aniversário Bia!!! E FIM, GOSTOU DO BOLO? QUAL GOSTO TINHA?");
+                                                                                    
+                                                                                }, 2000);
+                                                                            });
+                                                            }, 5000)
+                                                        }, 60); // rápido fade in
+                                                    }, 800); // Aguarda fade out do presente
+                                                });
+                                            }
+                                        });
+                                    }, 1000);
+                                }, 1000);
+                            });
+                        });
+                    });
+                }, 1000);
+            });
+        });
+    });
+});
+    </script>
+</body>
+</html>
