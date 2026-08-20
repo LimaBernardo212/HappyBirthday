@@ -185,7 +185,7 @@
         }
         .ballons {
     display: flex;
-    position: relative;
+    
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -334,7 +334,7 @@
         const h1 = document.querySelector('.Initial h1');
         const h2 = document.querySelector('.Initial h2');
         let h1Text = "Hoje é seu aniversário, PARABÉNS!";
-        let h2Text = "Bia, hoje, dia 20/08, é seu aniversário, e como você e uma pessoa muito especial para mim e eu não tinha muito oque fazer, eu decidi criar uma 'lembrancinha' até porque não isso não e um presente, mais de qualquer forma parabens pelo ano de vida aí. Sinceramente quero que você tivesse uma vida enorme e cheia de surpresa boas, que você possa sorrir para a vida e que ela possa sorrir para você de volta. Enfim chega de melação e vamos ao que interessa o bolo.";
+        let h2Text = "Bia, hoje, dia 20/08, é seu aniversário, e como você e uma pessoa muito especial para mim e eu não tinha muito oque fazer, eu decidi criar uma 'lembrancinha' até porque não isso não e um presente, mais de qualquer forma parabens pelo ano de vida aí. Sinceramente quero que você tenha uma vida enorme e cheia de surpresa boas, que você possa sorrir para a vida e que ela possa sorrir para você de volta. Enfim chega de melação e vamos ao que interessa o bolo.";
         const initial = document.querySelector('.Initial');
         const ocultImg = document.querySelector('.ocultsImg');
         const atelie = document.querySelector('.atelie');
@@ -415,7 +415,7 @@
                                                             ballons.forEach((img, idx) => {
                                                                img.style.opacity = '0'
                                                                 img.style.left = `${(Math.floor(Math.random() * 90))}vw`;
-                                                                img.style.bottom = '-30vh'
+                                                                img.style.bottom = '-10vh'
                                                                 setTimeout(() => {
                                                                     img.classList.add('imgFade');
                                                                 }, idx * 200);
