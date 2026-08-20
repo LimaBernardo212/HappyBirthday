@@ -44,7 +44,7 @@
         }
         @keyframes FadeIn {
             0%{
-                transform: translateY(-100vh);
+                transform: translateY(100vh);
                 opacity: 0;
             }
             10%{
@@ -250,7 +250,7 @@
                 font-size: 2.5em;
             }
             .Initial h2{
-                font-size: 1.2em;
+                font-size: 1em;
                 max-width: 80vw;
                 text-align: justify;
             }
@@ -415,7 +415,7 @@
                                                             ballons.forEach((img, idx) => {
                                                                img.style.opacity = '0'
                                                                 img.style.left = `${(Math.floor(Math.random() * 90))}vw`;
-                                                                img.style.bottom = '-10vh'
+                                                                img.style.bottom = '-30vh'
                                                                 setTimeout(() => {
                                                                     img.classList.add('imgFade');
                                                                 }, idx * 200);
